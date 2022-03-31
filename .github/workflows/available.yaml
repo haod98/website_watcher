@@ -11,4 +11,4 @@ jobs:
         with:
           node-version: "14"
       - run: npm i
-      - run: npm watch
+      - run: npm run watch
