@@ -7,4 +7,3 @@ describe("Watch if a PS5 is available", () => {
         cy.get("[data-test=a2c-Button]").should('not.exist');
     });
 });
-// Random commit to test if webhook work
