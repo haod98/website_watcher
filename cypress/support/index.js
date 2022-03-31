@@ -16,5 +16,11 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+// Cypress.Cookies.defaults({
+//     preserve: 'cookie_name'
+// });
+// Preserve cookies before test starts
+
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
