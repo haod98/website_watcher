@@ -1,7 +1,7 @@
 name: Check if product is available
 on:
   schedule:
-    - cron: "0 8-24 * * *"
+    - cron: "0 8-23 * * *"
   workflow_dispatch:
 jobs:
   product_available:
