@@ -21,6 +21,6 @@ jobs:
         if: failure()
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-        uses: Ilschidur/action-discord@master
+        uses: Ilshidur/action-discord@master
         with:
           args: "Test Message"
