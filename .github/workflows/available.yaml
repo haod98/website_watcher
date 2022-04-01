@@ -17,7 +17,11 @@ jobs:
         run: npm i
       - name: Run test
         run: npm run watch
-      # - name: On failure
-      #   if: failure()
-      # - name: Send message
-      #   run: echo "I failed"
+      - name: On failure
+        if: failure()
+      - name: Send Discord message
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+        uses: Ilschidur/action-discord@master
+        with:
+          args: "Test Message"
