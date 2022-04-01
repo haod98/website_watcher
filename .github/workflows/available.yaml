@@ -8,14 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
       - name: Setup node
-      - uses: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: "14"
-      - name: Install npm and run test
-      - run: npm i
-      - run: npm run watch
+      - name: Install npm
+        run: npm i
+      - name: Run test
+        run: npm run watch
       - name: On failure
         if: failure()
       - name: Send message
