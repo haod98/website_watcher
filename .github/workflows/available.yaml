@@ -1,8 +1,8 @@
 name: Check if product is available
 on:
-  # schedule:
-  #   - cron: "*/5 * * * *"
-  workflow_dispatch:
+  schedule:
+    - cron: "*/1 * * * *"
+  # workflow_dispatch:
 jobs:
   product_available:
     runs-on: ubuntu-latest
@@ -17,7 +17,7 @@ jobs:
         run: npm i
       - name: Run test
         run: npm run watch
-      - name: On failure
+      # - name: On failure
       #   if: failure()
       # - name: Send message
       #   run: echo "I failed"
