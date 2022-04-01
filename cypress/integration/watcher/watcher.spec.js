@@ -4,6 +4,6 @@ describe("Watch if a PS5 is available", () => {
     });
     it("Add to basket button is NOT available", () => {
         cy.get("[data-test=pwa-consent-layer-save-settings]").click();
-        cy.get("[data-test=a2c-Button]").should('not.exist');
+        cy.get("[data-test=a2c-Butto]").should('not.exist');
     });
 });
