@@ -23,4 +23,10 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         uses: Ilshidur/action-discord@master
         with:
-          args: "@everyone a PS5 may be available ${{ secrets.PRODUCT_LINK  }} "
+          args: "@everyone a PS5 may be available ${{ secrets.PRODUCT_LINK  }}"
+      - uses: actions/upload-artifact@v3V
+        name: "Save Video"
+        if: failure()
+        with:
+          name: "Cypress Video"
+          path: "/home/runner/work/website_watcher/website_watcher/cypress/videos/watcher/watcher.spec.js.mp4"
