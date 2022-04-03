@@ -24,7 +24,7 @@ jobs:
         uses: Ilshidur/action-discord@master
         with:
           args: "@everyone a PS5 may be available ${{ secrets.PRODUCT_LINK  }}"
-      - uses: actions/upload-artifact@v3V
+      - uses: actions/upload-artifact@v3
         name: "Save Video"
         if: failure()
         with:
